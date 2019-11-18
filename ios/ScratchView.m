@@ -124,7 +124,7 @@
 }
 
 -(void) initGrid
-{ 
+{
   gridSize = MAX(MIN(ceil(minDimension / brushSize), 29), 9);
   grid = [[NSMutableArray alloc] initWithCapacity: gridSize];
   for (int x = 0; x < gridSize; x++)
@@ -185,7 +185,7 @@
   else {
     imageRect = CGRectMake(0, 0, selfSize.width, selfSize.height);
   }
-  
+
   if (image == nil) {
     return;
   }
@@ -218,9 +218,13 @@
   UITouch *touch = [touches anyObject];
   path = [UIBezierPath bezierPath];
   path.lineWidth = brushSize;
-  
+  path.lineJoinStyle = kCGLineJoinRound;
+  path.lineCapStyle = kCGLineCapRound;
+
   CGPoint point = [touch locationInView:self];
-  [path moveToPoint:point];
+
+
+[path moveToPoint:point];
   [self drawImageStart];
 }
 
@@ -275,3 +279,4 @@
 }
 
 @end
+

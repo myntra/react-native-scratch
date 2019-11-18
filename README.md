@@ -1,13 +1,13 @@
 
-# react-native-scratch
+# myntra-react-native-scratch
 
 ## Getting started
 
-`$ npm install react-native-scratch --save`
+`$ npm install myntra-react-native-scratch --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-scratch`
+`$ react-native link myntra-react-native-scratch`
 
 ### Manual installation
 
@@ -15,7 +15,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-scratch` and add `RNScratch.xcodeproj`
+2. Go to `node_modules` ➜ `myntra-react-native-scratch` and add `RNScratch.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNScratch.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -26,12 +26,12 @@
   - Add `new ScratchViewPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-scratch'
-  	project(':react-native-scratch').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-scratch/android')
+  	include ':myntra-react-native-scratch'
+  	project(':myntra-react-native-scratch').projectDir = new File(rootProject.projectDir, 	'../node_modules/myntra-react-native-scratch/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      implementation project(':react-native-scratch')
+      implementation project(':myntra-react-native-scratch')
   	```
 
 
@@ -42,7 +42,7 @@ Just put it as the last component in your view
 ```javascript
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import ScratchView from 'react-native-scratch'
+import ScratchView from 'myntra-react-native-scratch'
 
 class MyView extends Component {
 

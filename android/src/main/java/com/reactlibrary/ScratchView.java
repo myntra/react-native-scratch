@@ -11,7 +11,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import java.util.ArrayList;
 import android.graphics.Rect;
-import androidx.annotation.Nullable;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -74,6 +74,8 @@ public class ScratchView extends View implements View.OnTouchListener {
 
         pathPaint.setAlpha(0);
         pathPaint.setStyle(Paint.Style.STROKE);
+        pathPaint.setStrokeJoin(Paint.Join.ROUND);
+        pathPaint.setStrokeCap(Paint.Cap.ROUND);
         pathPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
         pathPaint.setAntiAlias(true);
 
