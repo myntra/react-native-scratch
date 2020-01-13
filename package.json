@@ -22,8 +22,5 @@
     "scratch-image"
   ],
   "author": "Roy Ben-Sasson",
-  "license": "MIT",
-  "peerDependencies": {
-    "react-native": "0.51.0"
-  }
+  "license": "MIT"
 }
